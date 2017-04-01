@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Physician Referral Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <style type = 'text/css'>
+        h1{
+            color:#900000;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+        }
+
+        #p1{
+            font-size: 170% ; 
+        }
+        #p2,#p3,#p12{
+            font-size: 75%;
+        }
+        #p4,#p6,#p9{
+            color:#900000;
+            font-size:125%;
+        }
+        #p11{
+            font-size:125%;
+        }
+
+        #submit{
+            font-family: Courier, "Lucida Console", monospace;
+            border:#900000 1px solid;
+            width:200px;
+            height:50px;
+            font-size: 200%
+        }
+
+    </style>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
+    <script>
+      $(document).ready(function() {
+	  
+        $( "#birth" ).datepicker({
+			changeMonth: true,
+			changeYear: true
+		});
+    });
+    </script>
+</head>
+<body>
+    <form action="osu" method="post">
+        <div class="head" style="border:0px;height:30px; background: #900000"></div>
+
+        <h1><lable style="float: left; width: 900px;">Physician Referral Form </lable><img src="osulogo.jpg" style="width:250px; height:55px; "></h1>
+
+        <p id = "p1">
+            <lable style="float: left; width: 300px;">Is this referral urgent? </lable>
+            <lable style="float: left; width: 100px;">Yes<input id ="yes" type ="Radio" name ="Is this referral urgent" value ="Yes"> </lable>
+            No<input type ="Radio" name ="Is this referral urgent" value ="No">
+        </p>
+
+        <p id = "p2">
+            If urgent appointment is needed, please call 614-293-5123 to speak with a scheduling representative.
+        </p>
+
+        <hr style="height:3px;border:none;border-top:2px ridge #900000;" />
+
+        <p id ="p3">
+            Please fill out this form completely, include any clinical documentation relevant to this referral, and fax all documents to 614-293-1456. Missing information (including clinical documentation) may result in a processing delay.<br />
+            <input type = "Radio" name = "Clinical Documentation included" value = "YES" ><b>Clinical Documentation included</b>
+            (Examples include: insurance cards, imaging, lab work, office procedures, office notes, etc.)
+        </p>
+
+        <p id = "p4">
+            Patient Information:
+        </p>
+
+        <hr style="height:3px; border:none; border-top:2px ridge #900000;" />
+
+        <p id="p5">
+            <label style="float: left; width: 450px;">First Name:</label>
+            <label style="float: left; width: 450px;">Middle Name:</label>
+            <label>Last Name:</label><br />
+
+            <lable style="float: left; width: 450px;"><input type = "text" name = "First Name" style = "height:23px; width:200px; border-color: black; "></lable>
+            <lable style="float: left; width: 450px;"><input type = "text" name = "Middle Name" style = "height:23px; width:200px; border-color: black; "></lable>
+            <lable ><input type = "text" name = "Last Name" style = "height:23px; width:200px; border-color: black; "></lable><br/><br/>
+
+            <label style="float: left; width: 225px;">Gender:</label>
+            <label style="float: left; width: 400px;">Marital Status:</label>
+            <label style="float: left; width: 275px;">Last 4 digits of SSN:</label>
+            <label>Date of Birth (mm/dd/yyyy):</label><br />
+
+            <lable style="float: left; width: 225px;"><input type = "text" name = "Gender" style = "height:23px; width:100px; border-color: black; "></lable>
+            <lable style="float: left; width: 400px;"><input type = "text" name = "Marital Status" style = "height:23px; width:300px; border-color: black; "></lable>
+            <lable style="float: left; width: 275px;"><input type = "text" name = "Last 4 digits of SSN" style = "height:23px; width:100px; border-color: black; "></lable>
+            <lable ><input type = "text" id = "birth" name="Date of Birth" style = "height:23px; width:200px; border-color: black; "></lable><br/><br/>
+
+            <label style="float: left; width: 450px;">Primary Phone:</label>
+            <label>Street Address:</label><br />
+
+            <lable style="float: left; width: 450px;"><input type = "text" name = "Primary Phone" style = "height:23px; width:200px; border-color: black; "></lable>
+            <lable ><input type = "text" name = "Street Address" style = "height:23px; width:650px; border-color: black; "></lable><br/><br/>
+
+            <label style="float: left; width: 225px;">City:</label>
+            <label style="float: left; width: 400px;">State:</label>
+            <label style="float: left; width: 275px;">Zip:</label>
+            <label>Country:</label><br />
+
+            <lable style="float: left; width: 225px;"><input type = "text" name = "City" style = "height:23px; width:100px; border-color: black; "></lable>
+            <lable style="float: left; width: 400px;"><input type = "text" name = "State" style = "height:23px; width:300px; border-color: black; "></lable>
+            <lable style="float: left; width: 275px;"><input type = "text" name = "Zip" style = "height:23px; width:100px; border-color: black; "></lable>
+            <lable ><input type = "text" name = "Country" style = "height:23px; width:200px; border-color: black; "></lable><br/><br/>
+        </p>
+
+        <p id="p6">
+            Details:
+        </p>
+
+        <hr style="height:3px; border:none; border-top:2px ridge #900000;" />
+
+        <div class="part1" style="border:0px;height:170px">
+            <div class="left1" style="float:right;width:50%;border:1px">
+                <p id="p7">
+                    <label>Preferred Physician or Provider Name if Applicable:</label><br />
+                    <lable ><input type = "text" name = "Preferred Physician or Provider Name if Applicable" style = "height:23px; width:470px; border-color: black; "></lable><br/><br/>
+                    <label>Department or Specialty Area:</label><br />
+                    <lable ><input type = "text" name = "Department or Specialty Area" style = "height:23px; width:470px; border-color: black; "></lable><br/>
+
+                </p>
+            </div>
+            <div class="right1" style="width:50%;border:1px">
+                <p id="p8">
+                    <label>Reasons for Referral:</label><br />
+                    <textarea name = "Reasons for Referral" rows = 5 cols = 90 style="border-color:black;"></textarea><br/><br/>
+                    <lable style="float: left; width: 225px;"><input type="Radio" name="langs2" value = "Consult or Second Opinion">Consult or Second Opinion</lable>
+                    <lable style="float: left; width: 225px;"><input type="Radio" name="langs2" value = "Transfer of Care">Transfer of Care</lable><br/>
+                </p>
+
+            </div>
+        </div>
+
+        <p id="p9">
+            Referring Provider Information:
+        </p>
+
+        <hr style="height:3px; border:none; border-top:2px ridge #900000;" />
+
+        <p id="p10">
+            <label style="float: left; width: 450px;">Provider First Name:</label>
+            <label>Provider Last Name:</label><br />
+
+            <lable style="float: left; width: 450px;"><input type = "text" name = "Provider First Name" style = "height:23px; width:250px; border-color: black; ">
+            </lable>
+            <lable ><input type = "text" name = "Provider Last Name" style = "height:23px; width:250px; border-color: black; "></lable><br/><br/>
+
+            <label style="float: left; width: 450px;">Provider Title:</label>
+            <label>NPI Number:</label><br />
+
+            <lable style="float: left; width: 450px;"><input type = "text" name = "Provider Title" style = "height:23px; width:250px; border-color: black; ">
+            </lable>
+            <lable ><input type = "text" name = "NPI Number" style = "height:23px; width:250px; border-color: black; "></lable><br/><br/>
+
+            <label style="float: left; width: 450px;">Street Address:</label>
+            <label style="float: left; width: 450px;">City:</label>
+            <label>State:</label><br />
+
+            <lable style="float: left; width: 450px;"><input type = "text" name = "Street Address" style = "height:23px; width:400px; border-color: black; ">
+            </lable>
+            <lable style="float: left; width: 450px;"><input type = "text" name = "City" style = "height:23px; width:250px; border-color: black; ">
+            </lable>
+            <lable ><input type = "text" name = "State" style = "height:23px; width:200px; border-color: black; "></lable><br/><br/>
+
+            <label style="float: left; width: 225px;">Zip:</label>
+            <label style="float: left; width: 400px;">Phone:</label>
+            <label style="float: left; width: 275px;">Extension:</label>
+            <label>Fax:</label><br />
+
+            <lable style="float: left; width: 225px;"><input type = "text" name = "Zip" style = "height:23px; width:100px; border-color: black; ">
+            </lable>
+            <lable style="float: left; width: 400px;"><input type = "text" name = "Phone" style = "height:23px; width:300px; border-color: black; ">
+            </lable>
+            <lable style="float: left; width: 275px;"><input type = "text" name = "Extension" style = "height:23px; width:100px; border-color: black; "></lable>
+            <lable ><input type = "text" name = "Fax" style = "height:23px; width:200px; border-color: black; "></lable><br/><br/><br/><br/>
+
+
+            <div class="part2" style="border:0px;height:50px">
+                <div class="left2" style="float:right;width:80%;border:0px">
+                    <br/>
+                    <hr style="height:3px; border:none; border-top:2px ridge black;" />
+                </div>
+
+                <div class="right2" style="width:20%;border:0px">
+                    <p id="p11"><b>Physician Signature:</b></p>
+                </div>
+            </div>
+
+            <div class="part3" style="border:0px;height:50px">
+                <div class="left3" style="float:right;width:20%;border:0px">
+                    <input type="submit" name="submit" value="submit" id = "submit">
+                </div>
+
+                <div class="right3" style="width:70%;border:0px">
+                    <p id="p12">
+                        Please print out this form and include any relevant clinical documentation. Fax all documents to 614-293-1456. A scheduling representative will work with your patient to coordinate the appointment. Your o ce will receive notification via fax once the appointment has been scheduled. To contact via telephone, please call 614-293-5123 to speak with a scheduling representative.
+                    </p>
+                </div>
+            </div>
+        </p>
+    </form>
+
+</body>
+</html>
+
+
+
+
+
